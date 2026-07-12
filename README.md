@@ -15,7 +15,7 @@ Grant that stage to a player via KubeJS when they should unlock JourneyMap, e.g.
 player.stages.add("journeymap")
 ```
 Or add it ingame via
-```js
+```
 /kubejs stages add <Player> journeymap
 /kubejs stages remove <Player> journeymap
 ```
