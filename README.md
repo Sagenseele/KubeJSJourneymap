@@ -1,8 +1,7 @@
 # KubeJS Journeymap
 
-A client-side NeoForge **1.21.1** mod that locks JourneyMap (fullscreen map, menus and minimap)
-behind a [KubeJS](https://kubejs.com/) stage. While the stage is missing, JourneyMap's GUIs can't be
-opened (an action-bar message is shown) and the minimap stays hidden.
+A client-side NeoForge **1.21.1** mod that locks JourneyMap behind a [KubeJS](https://kubejs.com/) stage. While the stage is missing, JourneyMap's GUIs can't be
+opened and the minimap stays hidden.
 
 **Requires:** KubeJS and JourneyMap obviously.
 
@@ -16,5 +15,3 @@ opened (an action-bar message is shown) and the minimap stays hidden.
    ```js
    player.stages.add("journeymap")
    ```
-
-That's it — before the player has the stage, JourneyMap is locked; after, it works normally.
