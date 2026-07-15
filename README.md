@@ -4,7 +4,7 @@ A client-side NeoForge **1.21.1** mod that locks JourneyMap (fullscreen map, men
 behind a [KubeJS](https://kubejs.com/) stage. While the stage is missing, JourneyMap's GUIs can't be
 opened (an action-bar message is shown) and the minimap stays hidden.
 
-**Requires:** KubeJS and JourneyMap.
+**Requires:** KubeJS and JourneyMap obviously.
 
 ## Usage
 
