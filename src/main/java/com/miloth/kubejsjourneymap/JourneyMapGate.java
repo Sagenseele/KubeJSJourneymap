@@ -1,4 +1,4 @@
-package com.miloth.journeymapstages;
+package com.miloth.kubejsjourneymap;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
@@ -17,10 +17,10 @@ import net.neoforged.neoforge.client.event.ScreenEvent;
  *     <li>Hides the minimap until the stage is unlocked.</li>
  * </ul>
  */
-@EventBusSubscriber(modid = Journeymapstages.MODID, value = Dist.CLIENT)
+@EventBusSubscriber(modid = KubeJSJourneymap.MODID, value = Dist.CLIENT)
 public final class JourneyMapGate {
 
-    private static final Component LOCKED_MESSAGE = Component.translatable("journeymapstages.locked");
+    private static final Component LOCKED_MESSAGE = Component.translatable("kubejsjourneymap.locked");
 
     /** null = not evaluated since joining a world; used so we never fight the user's minimap toggle once unlocked. */
     private static Boolean wasLocked = null;
@@ -31,7 +31,7 @@ public final class JourneyMapGate {
     @SubscribeEvent
     public static void onScreenOpening(ScreenEvent.Opening event) {
         if (JourneyMapUi.isJourneyMapScreen(event.getNewScreen())
-                && !StageHelper.hasStage(Config.journeyMapStage)) {
+                && !StageHelper.hasStage(Config.stage)) {
             event.setCanceled(true);
             Minecraft.getInstance().gui.setOverlayMessage(LOCKED_MESSAGE, false);
         }
@@ -48,7 +48,7 @@ public final class JourneyMapGate {
             return;
         }
 
-        boolean locked = !StageHelper.hasStage(Config.journeyMapStage);
+        boolean locked = !StageHelper.hasStage(Config.stage);
         if (locked) {
             // Keep the minimap forced off while gated (only writes when it is actually on).
             if (JourneyMapUi.isMinimapEnabled()) {

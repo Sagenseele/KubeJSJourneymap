@@ -1,4 +1,4 @@
-package com.miloth.journeymapstages;
+package com.miloth.kubejsjourneymap;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.gui.screens.Screen;
@@ -47,7 +47,7 @@ public final class JourneyMapUi {
         }
     }
 
-    /** @return true if JourneyMap's minimap controls were found and can be driven. */
+    /** @return true if JourneyMap's minimap controls were found and can be driven. huiii */
     public static boolean isPresent() {
         resolve();
         return uiManagerInstance != null;

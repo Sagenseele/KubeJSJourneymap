@@ -1,4 +1,4 @@
-package com.miloth.journeymapstages;
+package com.miloth.kubejsjourneymap;
 
 import dev.latvian.mods.kubejs.core.PlayerKJS;
 import net.minecraft.client.Minecraft;

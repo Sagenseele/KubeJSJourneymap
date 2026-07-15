@@ -25,7 +25,7 @@ displayName = "${mod_name}" #mandatory
 # A URL for the "homepage" for this mod, displayed in the mod UI
 #displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
 # A file name (in the root of the mod JAR) containing a logo for display
-#logoFile="journeymapstages.png" #optional
+#logoFile="kubejsjourneymap.png" #optional
 # A text field displayed in the mod UI
 #credits="" #optional
 # A text field displayed in the mod UI
@@ -72,7 +72,6 @@ versionRange = "${minecraft_version_range}"
 ordering = "NONE"
 side = "BOTH"
 
-# KubeJS provides the stages system that gates JourneyMap.
 [[dependencies."${mod_id}"]]
 modId = "kubejs"
 type = "required"
@@ -80,12 +79,9 @@ versionRange = "[2101,)"
 ordering = "AFTER"
 side = "BOTH"
 
-# JourneyMap is the mod being gated.
 [[dependencies."${mod_id}"]]
 modId = "journeymap"
 type = "required"
-# JourneyMap's mod version embeds the MC version first (e.g. "1.21.1-6.0.0"), so a numeric
-# lower bound is unreliable; require any version.
 versionRange = "*"
 ordering = "AFTER"
 side = "CLIENT"
